@@ -12,6 +12,14 @@ html {
   color: #ccc;
 }
 
+div {
+  margin: 15px;
+}
+
+input {
+  margin: 5px;
+}
+
 a {
   text-decoration: none;
   color: #225ca3;
