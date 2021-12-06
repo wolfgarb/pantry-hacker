@@ -1,17 +1,19 @@
+<!DOCTYPE html>
 <html lang='en'>
 
 <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>pantry hacker</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css'>
 </head>
 
 <body>
+    <div>
     <header>
-        // pantry hacker //
+        <h1 href="/">// pantry hacker //</h1>
         <nav>
-            <span><a href="/">home</a></span>
+            {{!-- <span><a href="/">home</a></span> --}}
             {{#if loggedIn}}
             <a href="/dashboard">dashboard</a>
             <button id="logout" class="btn-no-style">logout</button>
@@ -24,6 +26,8 @@
     <main>
         {{{body}}}
     </main>
+    </div>
+
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
     {{/if}}
