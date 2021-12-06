@@ -6,7 +6,8 @@ function recipeSearch(event) {
   const ing_3 = document.querySelector('input[name="ing-3"]').value.trim();
 
   console.log(ing_1 + ing_2 + ing_3);
-}
+
+  
 
 document
   .querySelector('.recipe-search-form')

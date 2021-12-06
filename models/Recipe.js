@@ -27,7 +27,15 @@ Recipe.init(
     ing_3: {
       type: DataTypes.STRING(50),
       allowNull: false
+    },
+    recipe_text: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+          len: [1]
+      }
     }
+
   },
   {
     sequelize,
