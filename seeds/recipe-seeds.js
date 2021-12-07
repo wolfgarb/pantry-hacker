@@ -1,35 +1,45 @@
-const Recipe = require('../models');
+const { Recipe } = require('../models');
 
 const recipedata = [
   {
+    id: 1,
     title: 'Chicken Parmesean',
     ing_1: 'chicken',
     ing_2: 'cheese',
-    ing_3: 'tomato'
+    ing_3: 'tomato',
+    recipe_text: 'filler'
   },
   {
+    id: 2,
     title: 'Chicken Sandwich',
     ing_1: 'chicken',
     ing_2: 'bread',
-    ing_3: 'pickle'
+    ing_3: 'pickle',
+    recipe_text: 'filler'
   },
   {
+    id: 3,
     title: 'PBJ',
     ing_1: 'bread',
     ing_2: 'peanut-butter',
-    ing_3: 'jelly'
+    ing_3: 'jelly',
+    recipe_text: 'filler'
   },
   {
+    id: 4,
     title: 'Green Smoothie',
     ing_1: 'kale',
     ing_2: 'milk',
-    ing_3: 'banana'
+    ing_3: 'banana',
+    recipe_text: 'filler'
   },
   {
+    id: 5,
     title: 'Yogurt Parfait',
     ing_1: 'banana',
     ing_2: 'yogurt',
-    ing_3: 'strawberry'
+    ing_3: 'strawberry',
+    recipe_text: 'filler'
   }
 ];
 

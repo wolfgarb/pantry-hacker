@@ -2,53 +2,66 @@
     welcome to the club 🥪
 </div>
 
+
 <div>
     Add ingredients to search our database for a recipe!
 </div>
 
 <form class="recipe-search-form">
     <label for="ing-1">Ingredient 1:</label>
-    <input type="text" id="ing-1"  name="ing-1" />
-{{!-- <br>
+    <input type="text" id="ing-1" name="ing-1" />
+    <br>
     <label for="ing-2">Ingredient 2:</label>
     <input type="text" id="ing-2" name="ing-2" />
-<br>
+    <br>
     <label for="ing-3">Ingredient 3:</label>
-    <input type="text" id="ing-3" name="ing-3" /> --}}
-<br>
-<button type="submit">Search recipes!</button>
+    <input type="text" id="ing-3" name="ing-3" />
+    <br>
+    <button type="submit">Search recipes!</button>
 </form>
 
+{{!-- <ol class="recipe-list">
+  {{#each recipes as |recipe|}}
+  <li>
+    {{> recipe-info recipe }}
+  </li>
+  {{/each}}
+</ol> --}}
 
-  {{!-- {
-    title: 'Chicken Parmesean',
-    ing_1: 'chicken',
-    ing_2: 'cheese',
-    ing_3: 'tomato'
-  },
-  {
-    title: 'Chicken Sandwich',
-    ing_1: 'chicken',
-    ing_2: 'bread',
-    ing_3: 'pickle'
-  },
-  {
-    title: 'PBJ',
-    ing_1: 'bread',
-    ing_2: 'peanut-butter',
-    ing_3: 'jelly'
-  },
-  {
-    title: 'Green Smoothie',
-    ing_1: 'kale',
-    ing_2: 'milk',
-    ing_3: 'banana'
-  },
-  {
-    title: 'Yogurt Parfait',
-    ing_1: 'banana',
-    ing_2: 'yogurt',
-    ing_3: 'strawberry'
-  } --}}
+{{!-- {
+title: 'Chicken Parmesean',
+ing_1: 'chicken',
+ing_2: 'cheese',
+ing_3: 'tomato',
+recipe_text: 'filler'
+},
+{
+title: 'Chicken Sandwich',
+ing_1: 'chicken',
+ing_2: 'bread',
+ing_3: 'pickle',
+recipe_text: 'filler'
+},
+{
+title: 'PBJ',
+ing_1: 'bread',
+ing_2: 'peanut-butter',
+ing_3: 'jelly',
+recipe_text: 'filler'
+},
+{
+title: 'Green Smoothie',
+ing_1: 'kale',
+ing_2: 'milk',
+ing_3: 'banana',
+recipe_text: 'filler'
+},
+{
+title: 'Yogurt Parfait',
+ing_1: 'banana',
+ing_2: 'yogurt',
+ing_3: 'strawberry',
+recipe_text: 'filler'
+--}}
 
 <script src="/javascript/recipe-search.js"></script>

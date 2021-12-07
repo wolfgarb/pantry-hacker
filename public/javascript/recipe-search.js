@@ -7,8 +7,11 @@ function recipeSearch(event) {
 
   console.log(ing_1 + ing_2 + ing_3);
 
-  
+}
 
 document
   .querySelector('.recipe-search-form')
   .addEventListener('submit', recipeSearch);
+
+
+
