@@ -1,14 +1,17 @@
-function recipeSearch(event) {
+async function recipeSearch(event) {
   event.preventDefault();
 
   const ingList = document.querySelector('input[name="ing-list"').value;
   console.log(ingList);
 
-  const response = await fetch(`/api/recipes`, {
-    method: 'GET',
-    body: JSON.stringify({
+  const response = await fetch(`/api/recipes/${ingList}`);
 
-    })
+  if (response.ok) {
+    document.location.replace('/');
+    console.log(response);
+  } else {
+    alert(response.statusText);
+  }
 }
 
 document
