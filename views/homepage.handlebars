@@ -4,21 +4,19 @@
 
 
 <div>
-    Add ingredients to search our database for a recipe!
+    Start typing ingredients (seperated by spaces) to search our recipe database!
 </div>
 
 <form class="recipe-search-form">
-    <label for="ing-1">Ingredient 1:</label>
-    <input type="text" id="ing-1" name="ing-1" />
-    <br>
-    <label for="ing-2">Ingredient 2:</label>
-    <input type="text" id="ing-2" name="ing-2" />
-    <br>
-    <label for="ing-3">Ingredient 3:</label>
-    <input type="text" id="ing-3" name="ing-3" />
+    <label for="ing-list">What's in your pantry?</label>
+    <input id="ing-list" name="ing-list" />
     <br>
     <button type="submit">Search recipes!</button>
 </form>
+
+<div id="recipe-render">
+{{!-- recipe stuff shows up here --}}
+</div>
 
 {{!-- <ol class="recipe-list">
   {{#each recipes as |recipe|}}

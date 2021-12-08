@@ -16,26 +16,25 @@ Recipe.init(
       allowNull: false
     },
     // url?
-    ing_1: {
-      type: DataTypes.STRING(50),
+    ingredients: {
+      type: DataTypes.STRING,
       allowNull: false
     },
-    ing_2: {
-      type: DataTypes.STRING(50),
-      allowNull: false
-    },
-    ing_3: {
-      type: DataTypes.STRING(50),
-      allowNull: false
-    },
+    // ing_2: {
+    //   type: DataTypes.STRING(50),
+    //   allowNull: false
+    // },
+    // ing_3: {
+    //   type: DataTypes.STRING(50),
+    //   allowNull: false
+    // },
     recipe_text: {
       type: DataTypes.TEXT,
       allowNull: false,
       validate: {
-          len: [1]
+        len: [1]
       }
     }
-
   },
   {
     sequelize,
