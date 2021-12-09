@@ -1,32 +1,39 @@
-<div>
-    welcome to the club 🥪
-</div>
+<section class="hero">
+  <div class="hero-cta">
+  <h1 class="header1">Pantry Hacker</h1>
+  <p>
+    Ever come home from a long day of work and stare blankly in your fridge thinking what to make? You've come to the right place. Pantry Hacker allow a user to input indregients they already have in their fridge and provide meal options in seconds. You can also create a account to post your own recipes as well as comment on your favorites? Give it a try below...
+</p>
+  </div>
+</section>
 
 
-<div>
+<div class="header1">
     Add ingredients to search our database for a recipe!
 </div>
 
-<form class="recipe-search-form">
+<form class="seach_wrap">
+  <div class="search_box">
     <label for="ing-1">Ingredient 1:</label>
-    <input type="text" id="ing-1" name="ing-1" />
+    <input type="text"class="input" id="ing-1" name="ing-1" />
     <br>
     <label for="ing-2">Ingredient 2:</label>
-    <input type="text" id="ing-2" name="ing-2" />
+    <input type="text" class="input" id="ing-2" name="ing-2" />
     <br>
     <label for="ing-3">Ingredient 3:</label>
-    <input type="text" id="ing-3" name="ing-3" />
+    <input type="text" class="input" id="ing-3" name="ing-3" />
     <br>
-    <button type="submit">Search recipes!</button>
+    <button class="btn btn_common" type="submit">Search recipes!</button>
+    </div>
 </form>
 
-{{!-- <ol class="recipe-list">
+<ul class="recipe-list">
   {{#each recipes as |recipe|}}
   <li>
     {{> recipe-info recipe }}
   </li>
   {{/each}}
-</ol> --}}
+</ul>
 
 {{!-- {
 title: 'Chicken Parmesean',
