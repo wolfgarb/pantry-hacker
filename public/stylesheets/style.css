@@ -8,12 +8,12 @@ html {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #ccc;
 }
 
 .hero {
-  background-image: url("../../assets/images/hero-bg.jpg");
+  background-image: url('../../assets/images/clubz.jpg');
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -29,7 +29,7 @@ html {
 }
 
 .header1 {
-color:rgb(255, 196, 0);
+  color: #ffd447;
 }
 div {
   margin: 15px;
@@ -41,17 +41,17 @@ input {
 
 a {
   text-decoration: none;
-  color: rgb(255, 196, 0);
+  color: #ffd447;
   font-weight: bold;
   transition: color 0.1s;
 }
 
 a:hover {
-  color: rgb(255, 196, 0);
+  color: #ffd447;
 }
 
 button {
-  background-color: rgb(255, 196, 0);
+  background-color: #ffd447;
   border: 0;
   padding: 1%;
   color: white;
@@ -62,23 +62,21 @@ button {
 }
 
 button:hover {
-  background-color: rgb(255, 196, 0);
+  background-color: #ffd447;
 }
-
-
 
 textarea,
 input {
   padding: 0.5%;
   border-radius: 5px;
   border: 1px solid #ccc;
-  color: rgb(255, 196, 0);
+  color: #ffd447;
 }
 
 textarea:focus,
 input:focus {
   outline: none;
-  border: 1px solid rgb(255, 196, 0);
+  border: 1px solid #ffd447;
 }
 
 textarea {
@@ -86,7 +84,7 @@ textarea {
   min-height: 100px;
 }
 
-form>div {
+form > div {
   margin-bottom: 2%;
 }
 
@@ -143,7 +141,7 @@ main {
 }
 
 .delete-post-btn:hover {
-  background-color: #ff643d;
+  color: #faa28e;
 }
 
 .post {
@@ -219,8 +217,8 @@ footer {
 
 .title {
   background: transparent;
-  border-bottom: 1px solid rgb(255, 196, 0);
-  color: rgb(255, 196, 0);
+  border-bottom: 1px solid #ffd447;
+  color: #ffd447;
   display: block;
   margin: 0;
   margin-bottom: 5px;
@@ -231,7 +229,7 @@ footer {
 }
 
 h3 {
-  color: rgb(255, 196, 0);
+  color: #ffd447;
   font-weight: 300;
   margin: 0;
   margin-bottom: 15px;
@@ -242,17 +240,22 @@ h3 {
 ul.ingredients {
   margin: 0;
   padding: 0;
-  list-style:disc;
+  /* list-style: disc; */
 }
 
 li {
-  color:rgb(255, 196, 0);
+  color: #ffd447;
   font-size: 1rem;
   text-align: left;
 }
 
+p {
+  font-size: medium;
+  font-weight: normal;
+}
+
 .ing {
-  color: rgb(255, 196, 0);
+  color: #ffd447;
   margin: 20px;
   text-align: left;
   font-size: 15px;
@@ -281,7 +284,8 @@ li {
 }
 
 .search_wrap .search_box .input {
-  padding-right: 80px right: 0px;
+  padding: 80px;
+  padding-right: 0px;
   border-radius: 50%;
 }
 
@@ -291,13 +295,13 @@ li {
   right: 0;
   width: 60px;
   height: 100%;
-  background:rgb(255, 196, 0);
+  background: #2e2c2c;
   z-index: 1;
   cursor: pointer;
 }
 
 .search_wrap .search_box .btn:hover {
-  background: rgb(255, 196, 0);
+  color: whitesmoke;
 }
 
 .search_wrap .search_box .btn.btn_common .fas {
@@ -305,6 +309,23 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: #2e2c2c;
   font-size: 20px;
+}
+
+#search-recipe-btn {
+  color: #2e2c2c;
+  text-decoration: none;
+}
+
+.btn,
+button {
+  color: #2e2c2c;
+  text-decoration: none;
+}
+
+#logout {
+  color: #faa28e;
+  font-style: italic;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
