@@ -66,11 +66,11 @@ router.get('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
-
+// withAuth,
 //post a recipe
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
   // expects {title: 'Title', ing_1 = 'Chicken', ing_2='Bread', ing_3='Cheese', recipe_text: 'text', user_id: 1}
-  Post.create({
+  Recipe.create({
       title: req.body.title,
       ing_1: req.body.ing_1,
       ing_2: req.body.ing_2,
@@ -78,7 +78,11 @@ router.post('/', withAuth, (req, res) => {
       recipe_text: req.body.recipe_text,
       user_id: req.session.user_id
   })
-      .then(dbRecipeData => res.json(dbRecipeData))
+      // .then(dbRecipeData => res.json(dbRecipeData))
+      .then(dbRecipeData => {
+        req.session.save(() => {res.json({user: dbRecipeData, message: 'Success!'});
+      });
+    })
       .catch(err => {
           console.log(err);
           res.status(500).json(err);
@@ -87,7 +91,7 @@ router.post('/', withAuth, (req, res) => {
 
 //update a recipe based on id
 router.put('/:id', withAuth, (req, res) => {
-  Post.update(
+  Recipe.update(
       {
         title: req.body.title,
         ing_1: req.body.ing_1,
