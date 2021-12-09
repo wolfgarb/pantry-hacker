@@ -3,14 +3,31 @@ const { Comment, Recipe } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //get comments
+// router.get('/', (req, res) => {
+//     Comment.findAll()   
+//         .then(dbCommentData => res.json(dbCommentData))
+//         .catch(err => {
+//             console.log(err);
+//             res.status(500).json(err);
+//         });
+// });
+
 router.get('/', (req, res) => {
-    Comment.findAll()
-        .then(dbCommentData => res.json(dbCommentData))
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-});
+    Comment.findAll({
+      attributes: ['id', 'title', 'ing_1', 'ing_2','ing_3', 'recipe_text'],
+      include: [
+        {
+            model: Comment,
+            attributes: ['id', 'comment_text', 'recipe_id', 'user_id', 'created_at']
+        },
+    ]
+  })
+      .then((dbCommentData) => res.json(dbCommentData))
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
 
 //post comments
 router.post('/', withAuth, (req, res) => {
@@ -51,3 +68,18 @@ router.delete('/:id', withAuth, (req, res) => {
 });
 
 module.exports = router;
+
+
+
+
+
+    // {
+    //     include: [
+    //         {
+    //             model: Comment,
+    //             attributes: ['comment_text', 'user_id', 'recipe_id']
+
+    //         }
+    //     ]
+    // })
+    //   
