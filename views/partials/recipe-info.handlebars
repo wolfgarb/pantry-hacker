@@ -26,12 +26,11 @@
                 <p class="ing">{{recipe_text}}</p>
             {{ recipe_content }}
         </div>
-        <br>
-        <div class="is-pulled-right">
-            <b>{{user.username}}</b> 
-             {{format_date created_at}} | <a href="/recipe/{{id}}">{{comments.length}} {{format_plural "comment"
+        {{!-- <div class="is-pulled-right">
+            <b>{{user.username}}</b> |
+            | {{format_date created_at}} | <a href="/recipe/{{id}}">{{comments.length}} {{format_plural "comment"
                 comments.length}}</a>
-        </div>
+        </div> --}}
 
     </div>
 
