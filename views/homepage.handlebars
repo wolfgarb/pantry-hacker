@@ -7,33 +7,29 @@
   </div>
 </section>
 
-
-<div class="header1">
-    Add ingredients to search our database for a recipe!
+<div>
+    Start typing ingredients (seperated by spaces) to search our recipe database!
 </div>
 
-<form class="seach_wrap">
-  <div class="search_box">
-    <label for="ing-1">Ingredient 1:</label>
-    <input type="text"class="input" id="ing-1" name="ing-1" />
-    <br>
-    <label for="ing-2">Ingredient 2:</label>
-    <input type="text" class="input" id="ing-2" name="ing-2" />
-    <br>
-    <label for="ing-3">Ingredient 3:</label>
-    <input type="text" class="input" id="ing-3" name="ing-3" />
+<form class="recipe-search-form">
+    <label for="ing-list">What's in your pantry?</label>
+    <input id="ing-list" name="ing-list" />
     <br>
     <button class="btn btn_common" type="submit">Search recipes!</button>
     </div>
 </form>
 
-<ul class="recipe-list">
+
+{{!-- recipe stuff shows up here --}}
+
+<ol class="recipe-list">
   {{#each recipes as |recipe|}}
   <li>
     {{> recipe-info recipe }}
   </li>
   {{/each}}
-</ul>
+</ol>
+
 
 {{!-- {
 title: 'Chicken Parmesean',
