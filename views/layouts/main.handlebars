@@ -11,9 +11,12 @@
 <body>
     <div>
     <header>
-        <h1 id="header-nav" href="/"> pantry hacker </h1>
+        <h1 id="header-nav" >
+        <a href="/"> pantry hacker </a>
+        </h1>
         <nav>
-            <span><a href="/">home |</a></span>
+            <span><a href="/">home</a></span>
+            <span id='seperator'>|</span>
             {{#if loggedIn}}
             <a href="/dashboard">dashboard</a>
             <button id="logout" class="btn-no-style">logout</button>
