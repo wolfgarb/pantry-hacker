@@ -1,9 +1,9 @@
-async function newFormHandler(event) {
+async function newRecipeHandler(event) {
   event.preventDefault();
 
-  const title = document.querySelector('input[name="recipe-title"]').value;
-  const ingredients = document.querySelector('input[name="ing-list"]').value;
-  const recipe_text = document.querySelector('input[name="recipe-text"]').value;
+  const title = document.querySelector('#recipe-title').value;
+  const ingredients = document.querySelector('#ing-list').value;
+  const recipe_text = document.querySelector('#recipe-text').value;
 
   const response = await fetch(`/api/recipes`, {
     method: 'POST',
@@ -18,7 +18,7 @@ async function newFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace('/dashboard');
+    document.location.replace('/');
   } else {
     alert(response.statusText);
   }
@@ -26,4 +26,4 @@ async function newFormHandler(event) {
 
 document
   .querySelector('.new-recipe-form')
-  .addEventListener('submit', newFormHandler);
+  .addEventListener('submit', newRecipeHandler);

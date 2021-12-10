@@ -13,7 +13,7 @@ html {
 }
 
 .hero {
-  background-image: url('../../assets/images/clubz.jpg');
+  background-image: url('/images/hero-bg.jpg');
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -26,17 +26,21 @@ html {
   font-size: 30px;
   font-weight: 580;
   color: aliceblue;
+  padding: 15px;
 }
 
 .header1 {
   color: #ffd447;
+  padding: 0 15px;
 }
+
 div {
   margin: 15px;
 }
 
 input {
   margin: 5px;
+  width: max-content;
 }
 
 a {
@@ -47,7 +51,7 @@ a {
 }
 
 a:hover {
-  color: #ffd447;
+  color: #faa28e;
 }
 
 button {
@@ -62,7 +66,7 @@ button {
 }
 
 button:hover {
-  background-color: #ffd447;
+  background-color: #faa28e;
 }
 
 textarea,
@@ -133,7 +137,7 @@ main {
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: #d41414;
 }
 
 .delete-post-btn {
@@ -195,6 +199,11 @@ footer {
   font-size: 110%;
 }
 
+#search-section {
+  justify-content: center;
+  text-align: center;
+}
+
 .recipe-list {
   list-style: none;
 }
@@ -252,6 +261,7 @@ li {
 p {
   font-size: medium;
   font-weight: normal;
+  padding: 15px;
 }
 
 .ing {
@@ -313,9 +323,13 @@ p {
   font-size: 20px;
 }
 
-#search-recipe-btn {
+#create-recipe-btn {
   color: #2e2c2c;
   text-decoration: none;
+}
+
+#create-recipe-btn:hover {
+  background-color: #faa28e;
 }
 
 .btn,
@@ -324,8 +338,14 @@ button {
   text-decoration: none;
 }
 
-#logout {
+#logout,
+#header-nav,
+#pantry-hacker-p {
   color: #faa28e;
   font-style: italic;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#logout:hover {
+  color: #d41414;
 }
