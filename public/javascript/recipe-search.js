@@ -1,13 +1,16 @@
 async function recipeSearch(event) {
   event.preventDefault();
 
-  const ingList = document.querySelector('input[name="ing-list"').value;
+  const ingList = document.querySelector('#ing-list').value;
   console.log(ingList);
-
+  // fetch call taking in params
   const response = await fetch(`/api/recipes/${ingList}`);
-
+  // actual data coming back from query (if there is data)
+  // const searchData = await response.json();
+  // console.log(searchData);
+  // if successful response...
   if (response.ok) {
-    document.location.replace('/');
+    document.location.replace(`/api/recipes/${ingList}`);
     console.log(response);
   } else {
     alert(response.statusText);
