@@ -180,6 +180,7 @@ main {
 }
 
 .comment-form {
+  margin-top: 5%;
   margin-bottom: 5%;
 }
 
@@ -189,11 +190,13 @@ main {
 }
 
 .comment:nth-child(odd) {
-  background-color: #fff5eb;
+  background-color: transparent;
+  /* background-color: #fff5eb; */
 }
 
 .comment .meta {
-  font-size: 90%;
+  font-size: 120%;
+  color: #faa28e;
   margin-bottom: 0.5%;
   opacity: 0.6;
 }
@@ -221,6 +224,7 @@ footer {
 
 .recipe-list {
   list-style: none;
+  flex: wrap;
 }
 
 .recipe-card {
@@ -231,6 +235,8 @@ footer {
   text-align: center;
   top: 5%;
   width: 50%;
+  border-radius: 15px;
+  flex: wrap;
 }
 
 .container {

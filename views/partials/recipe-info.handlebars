@@ -11,7 +11,20 @@
             </ul>
             <h3>How to:</h3>
                 <p class="ing">{{recipe_text}}</p>
-            {{!-- {{ recipe_content }} --}}
+            {{ recipe_content }}
+            
+            <div class="is-pulled-right">
+                <b>{{user.username}}</b> |
+                <a href="/recipe/{{id}}">{{comments.length}} {{format_plural "comment"
+                    comments.length}}</a>
+            </div>
         </div>
+        {{!-- <div class="is-pulled-right">
+            <b>{{user.username}}</b> |
+            <a href="/recipe/{{id}}">{{comments.length}} {{format_plural "comment"
+                comments.length}}</a>
+        </div> --}}
     </div>
 </div>
+
+{{!-- | {{format_date created_at}} | --}}
