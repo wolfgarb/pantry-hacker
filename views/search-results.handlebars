@@ -1,0 +1,12 @@
+
+{{!-- recipe stuff shows up here --}}
+
+<ol class="recipe-list">
+    {{#each recipes as |recipe|}}
+    <li>
+{{> recipe-info recipe }}
+    </li>
+    {{/each}}
+</ol>
+
+<script src="/javascript/recipe-search.js"></script>

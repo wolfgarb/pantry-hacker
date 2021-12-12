@@ -9,7 +9,7 @@ const withAuth = require('../../utils/auth');
 router.get('/', (req, res) => {
   console.log(req.body);
   Recipe.findAll({
-    attributes: ['id', 'title', 'ingredients', 'recipe_text'],
+    // attributes: ['id', 'title', 'ingredients', 'recipe_text'],
     include: [
       {
         model: Comment,
@@ -42,10 +42,11 @@ router.get('/:ingredient', (req, res) => {
   Recipe.findAll({
     where: {
       ingredients: {
+        // change req.params to array
         [Op.substring]: `%${req.params.ingredient}%`
       }
-    },
-    attributes: ['id', 'title', 'ingredients', 'recipe_text']
+    }
+    // attributes: ['id', 'title', 'ingredients', 'recipe_text']
   })
     .then((dbRecipeData) => {
       if (!dbRecipeData) {
@@ -53,7 +54,8 @@ router.get('/:ingredient', (req, res) => {
         return;
       }
       const recipes = dbRecipeData.map((recipe) => recipe.get({ plain: true }));
-      res.render('homepage', { recipes, loggedIn: true });
+      console.log(recipes);
+      res.render('search-results', { recipes });
     })
     .catch((err) => {
       console.log(err);
@@ -68,7 +70,7 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'title', 'ingredients', 'recipe_text'],
+    // attributes: ['id', 'title', 'ingredients', 'recipe_text'],
     include: [
       {
         model: Comment,
@@ -106,7 +108,7 @@ router.get('/:id', (req, res) => {
 //post a recipe
 router.post('/', withAuth, (req, res) => {
   // expects {title: 'Title', ing_1 = 'Chicken', ing_2='Bread', ing_3='Cheese', recipe_text: 'text', user_id: 1}
-  Post.create({
+  Recipe.create({
     title: req.body.title,
     ingredients: req.body.ingredients,
     recipe_text: req.body.recipe_text,
@@ -121,7 +123,7 @@ router.post('/', withAuth, (req, res) => {
 
 //update a recipe based on id
 router.put('/:id', withAuth, (req, res) => {
-  Post.update(
+  Recipe.update(
     {
       title: req.body.title,
       ingredients: req.body.ingredients,

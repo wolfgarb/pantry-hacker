@@ -15,7 +15,7 @@ Recipe.init(
       type: DataTypes.STRING(50),
       allowNull: false
     },
-    // url?
+    // array?
     ingredients: {
       type: DataTypes.STRING,
       allowNull: false

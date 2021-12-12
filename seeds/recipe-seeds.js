@@ -3,27 +3,27 @@ const { Recipe } = require('../models');
 const recipedata = [
   {
     title: 'Chicken Parmesean',
-    ingredients: 'chicken cheese tomato',
+    ingredients: 'chicken, cheese, tomato',
     recipe_text: 'filler'
   },
   {
     title: 'Beef Stroganoff',
-    ingredients: 'beef bread crumbs pasta',
+    ingredients: 'beef, bread crumbs, pasta',
     recipe_text: 'filler'
   },
   {
     title: 'PBJ',
-    ingredients: 'bread peanut butter jelly',
+    ingredients: 'bread, peanut butter, jelly',
     recipe_text: 'filler'
   },
   {
     title: 'Yogurt Parfait',
-    ingredients: 'yogurt bananas strawberries',
+    ingredients: 'yogurt, bananas, strawberries',
     recipe_text: 'filler'
   },
   {
     title: 'Green Smoothie',
-    ingredients: 'milk kale bananas',
+    ingredients: 'milk, kale, bananas',
     recipe_text: 'filler'
   }
 ];

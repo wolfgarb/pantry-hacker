@@ -1,24 +1,26 @@
 <section class="hero">
   <div class="hero-cta">
-  <h1 class="header1">Pantry Hacker</h1>
+  <h1 class="header1">Find recipes fast</h1>
   <p>
-    Ever come home from a long day of work and stare blankly in your fridge thinking what to make? You've come to the right place. Pantry Hacker allow a user to input indregients they already have in their fridge and provide meal options in seconds. You can also create a account to post your own recipes as well as comment on your favorites? Give it a try below...
+    Ever come home from a long day of work and stare blankly in your fridge thinking what to make? <br>
+    Tired of scrolling through home-maker blogs, ads, and life stories? You've come to the right place.<br> 
+    <span id='pantry-hacker-p'>Pantry Hacker</span> is a simple search tool for quick recipe information.
+    <br>Create an account to access the dashboard, post recipes, save favorites, and add comments.
 </p>
   </div>
 </section>
 
+<div id='search-section'>
+    Enter key ingredients (seperated by commas) to search our recipe database
 <div>
-    Start typing ingredients (seperated by spaces) to search our recipe database!
-</div>
-
 <form class="recipe-search-form">
-    <label for="ing-list">What's in your pantry?</label>
-    <input id="ing-list" name="ing-list" />
+    {{!-- <label for="ing-list">What's in your pantry?</label> --}}
+    <input id="ing-list" name="ing-list" size='50' />
     <br>
-    <button class="btn btn_common" type="submit">Search recipes!</button>
-    </div>
+    <button class="btn btn_common" type="submit">search</button>
 </form>
-
+</div>
+</div>
 
 {{!-- recipe stuff shows up here --}}
 
@@ -29,42 +31,5 @@
   </li>
   {{/each}}
 </ol>
-
-
-{{!-- {
-title: 'Chicken Parmesean',
-ing_1: 'chicken',
-ing_2: 'cheese',
-ing_3: 'tomato',
-recipe_text: 'filler'
-},
-{
-title: 'Chicken Sandwich',
-ing_1: 'chicken',
-ing_2: 'bread',
-ing_3: 'pickle',
-recipe_text: 'filler'
-},
-{
-title: 'PBJ',
-ing_1: 'bread',
-ing_2: 'peanut-butter',
-ing_3: 'jelly',
-recipe_text: 'filler'
-},
-{
-title: 'Green Smoothie',
-ing_1: 'kale',
-ing_2: 'milk',
-ing_3: 'banana',
-recipe_text: 'filler'
-},
-{
-title: 'Yogurt Parfait',
-ing_1: 'banana',
-ing_2: 'yogurt',
-ing_3: 'strawberry',
-recipe_text: 'filler'
---}}
 
 <script src="/javascript/recipe-search.js"></script>

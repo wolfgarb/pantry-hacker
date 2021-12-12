@@ -21,6 +21,8 @@ const sess = {
 };
 
 app.use(session(sess));
+// HELP
+// app.use(express.static('./assets/images/'));
 
 const helpers = require('./utils/helpers');
 const hbs = exphbs.create({ helpers });

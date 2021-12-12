@@ -1,37 +1,17 @@
 <div class="container">
-    {{!-- <header class="card-header card-header-title has-background-grey-lighter">
-
-        {{!-- <div class="card">
-            <p class=" has-text-primary-light"></p>
-            <a href="/recipe/{{id}}" class="has-text-black is-pulled-left">{{title}} </a></p>
-        </div> --}}
-
-        {{!-- <div class="column">
-            <span class=""> </span>
-        </div>
-
-    </header> --}}
     <div class="recipe-card">
         <div class="body">
             <h2>
             <a href="/recipe/{{id}}">{{title}} </a>
             </h2>
-            <h3>Ingredients</h3>
+            <h3>Ingredients:</h3>
             <ul class="ul-ingredients">
-                <li > {{ing_1}} </li>
-                <li > {{ing_2}} </li>
-                <li > {{ing_3}} </li>
+                <li > {{ingredients}} </li>
+               
             </ul>
             <h3>How to:</h3>
                 <p class="ing">{{recipe_text}}</p>
-            {{ recipe_content }}
+            {{!-- {{ recipe_content }} --}}
         </div>
-        {{!-- <div class="is-pulled-right">
-            <b>{{user.username}}</b> |
-            | {{format_date created_at}} | <a href="/recipe/{{id}}">{{comments.length}} {{format_plural "comment"
-                comments.length}}</a>
-        </div> --}}
-
     </div>
-
 </div>
