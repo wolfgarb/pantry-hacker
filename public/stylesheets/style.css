@@ -237,6 +237,7 @@ footer {
   width: 50%;
   border-radius: 15px;
   flex: wrap;
+  flex: 1;
 }
 
 .container {
