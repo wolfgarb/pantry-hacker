@@ -38,20 +38,20 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/', (req, res) => {
-  console.log(req.body);
-  Recipe.findAll({})
-    .then((dbRecipeData) => {
-      const recipes = dbRecipeData.map((recipe) => recipe.get({ plain: true }));
-      console.log(recipes);
-      for (let i = 0; i < recipes.length; i++) {
-        console.log(recipes[i].ingredients);
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
+// router.get('/', (req, res) => {
+//   console.log(req.body);
+//   Recipe.findAll({})
+//     .then((dbRecipeData) => {
+//       const recipes = dbRecipeData.map((recipe) => recipe.get({ plain: true }));
+//       console.log(recipes);
+//       for (let i = 0; i < recipes.length; i++) {
+//         console.log(recipes[i].ingredients);
+//       }
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// });
 
 router.get('/:ingredients', (req, res) => {
   Recipe.findAll({

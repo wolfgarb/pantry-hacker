@@ -48,7 +48,6 @@ router.get('/create/', withAuth, (req, res) => {
       // use the ID from the session
       user_id: req.session.user_id
     },
-    attributes: ['id', 'title', 'created_at', 'recipe_content'],
     include: [
       {
         model: Comment,
