@@ -27,7 +27,7 @@ Recipe.init(
     // ing_3: {
     //   type: DataTypes.STRING(50),
     //   allowNull: true
-    // },
+    },
     recipe_text: {
       type: DataTypes.TEXT,
       allowNull: false,
