@@ -225,7 +225,7 @@ footer {
 #search-section {
   justify-content: center;
   text-align: center;
-  padding-bottom: 30px;
+  padding: 30px 0 20px 0;
 }
 
 .recipe-section {
