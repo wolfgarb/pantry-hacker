@@ -7,6 +7,8 @@ async function newRecipeHandler(event) {
   const ing3 = document.querySelector('#ing3').value;
   const recipe_text = document.querySelector('#recipe-text').value;
 
+  console.log(ing1);
+
   const response = await fetch(`/api/recipes`, {
     method: 'POST',
     body: JSON.stringify({

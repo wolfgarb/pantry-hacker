@@ -122,7 +122,9 @@ router.get('/:id', (req, res) => {
 router.post('/', withAuth, (req, res) => {
   Recipe.create({
     title: req.body.title,
-    ingredients: req.body.ingredients,
+    ing1: req.body.ing1,
+    ing2: req.body.ing2,
+    ing3: req.body.ing3,
     recipe_text: req.body.recipe_text,
     user_id: req.session.user_id
   })
@@ -138,7 +140,9 @@ router.put('/:id', withAuth, (req, res) => {
   Recipe.update(
     {
       title: req.body.title,
-      ingredients: req.body.ingredients,
+      ing1: req.body.ing1,
+      ing2: req.body.ing2,
+      ing3: req.body.ing3,
       recipe_text: req.body.recipe_text
     },
     {
