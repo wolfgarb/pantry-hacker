@@ -24,16 +24,16 @@
 </section>
 
 {{#if recipes.length}}
-<section>
   <h2>Your Recipes</h2>
+<section>
   <ol>
     {{#each recipes as |recipe|}}
     <li>
+      <a href="/dashboard/edit/{{recipe.id}}" class="edit-link">Edit this recipe </a>
       {{> recipe-info recipe}}
-      <a href="/dashboard/edit/{{recipe.id}}" class="edit-link">Edit recipe</a>
     </li>
     {{/each}}
-  </ol>
+    </ol>
 </section>
 {{/if}}
 

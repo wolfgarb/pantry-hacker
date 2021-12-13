@@ -24,12 +24,13 @@
 
 {{!-- recipe stuff shows up here --}}
 
-<ol class="recipe-list">
+
+<div class="recipe-section">
   {{#each recipes as |recipe|}}
   <li>
     {{> recipe-info recipe }}
   </li>
   {{/each}}
-</ol>
+</div>
 
 <script src="/javascript/recipe-search.js"></script>
