@@ -2,7 +2,10 @@ async function editFormHandler(event) {
   event.preventDefault();
 
   const title = document.querySelector('input[name="recipe-title"]').value;
-  const ingredients = document.querySelector('input[name="ing-list"]').value;
+  const ing1 = document.querySelector('#ing1').value;
+  const ing2 = document.querySelector('#ing2').value;
+  const ing3 = document.querySelector('#ing3').value;
+
   const recipe_text = document.querySelector(
     'textarea[name="recipe-text"]'
   ).value;
@@ -14,7 +17,9 @@ async function editFormHandler(event) {
     method: 'PUT',
     body: JSON.stringify({
       title,
-      ingredients,
+      ing1,
+      ing2,
+      ing3,
       recipe_text
     }),
     headers: {
