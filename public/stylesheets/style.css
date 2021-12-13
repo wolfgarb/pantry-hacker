@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  background-color: #333;
+  background-color: rgb(46, 44, 44);
 }
 
 body,
@@ -8,39 +8,76 @@ html {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #ccc;
+}
+
+.hero {
+  background-image: url('/images/hero-bg.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  background-attachment: fixed;
+  background-position: 80%;
+  text-align: left;
+  height: 400px;
+  font-size: 30px;
+  font-weight: 580;
+  color: aliceblue;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.hero-cta {
+  background: transparent;
+}
+
+.hero p {
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.header1 {
+  color: #ffd447;
+  padding: 0 15px;
+  background: transparent;
+}
+
+div {
+  margin: 15px;
+}
+
+input {
+  margin: 5px;
+  width: max-content;
 }
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: #ffd447;
   font-weight: bold;
-  transition: color 0.1s;
+  transition: color 0.3s;
 }
 
 a:hover {
-  color: #3486eb;
+  color: #faa28e;
 }
 
 button {
-  background-color: #225ca3;
+  background-color: #ffd447;
   border: 0;
   padding: 1%;
   color: white;
   font-weight: bold;
-  transition: background-color 0.1s;
+  transition: 0.3s;
   cursor: pointer;
   border-radius: 5px;
 }
 
 button:hover {
-  background-color: #3486eb;
-}
-
-.post-list {
-  margin: 0;
-  padding: 0;
+  background-color: #faa28e;
 }
 
 textarea,
@@ -48,12 +85,13 @@ input {
   padding: 0.5%;
   border-radius: 5px;
   border: 1px solid #ccc;
+  color: #ffd447;
 }
 
 textarea:focus,
 input:focus {
   outline: none;
-  border: 1px solid #3486eb;
+  border: 1px solid #ffd447;
 }
 
 textarea {
@@ -104,21 +142,22 @@ main {
   color: #225ca3;
   font-size: 100%;
   font-weight: bold;
-  transition: color 0.1s;
+  transition: color 0.3s;
   margin-left: 16px;
 }
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: #d41414;
 }
 
 .delete-post-btn {
+  transition: 0.3s;
   background-color: #d41414;
 }
 
 .delete-post-btn:hover {
-  background-color: #ff643d;
+  color: #faa28e;
 }
 
 .post {
@@ -137,15 +176,6 @@ main {
   margin: -1.5% 0 2% 0;
 }
 
-.upvote-btn {
-  background-color: #197d0f;
-  transition: background-color 0.1s;
-}
-
-.upvote-btn:hover {
-  background-color: #1f9c13;
-}
-
 .comment-form {
   margin-bottom: 5%;
 }
@@ -153,10 +183,11 @@ main {
 .comment {
   padding: 1%;
   margin-bottom: 1%;
+ 
 }
 
 .comment:nth-child(odd) {
-  background-color: #fff5eb;
+  color:rgb(255, 196, 0);
 }
 
 .comment .meta {
@@ -179,4 +210,173 @@ footer {
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+}
+
+#search-section {
+  justify-content: center;
+  text-align: center;
+}
+
+.recipe-list {
+  list-style: none;
+}
+
+.recipe-card {
+  background: whitesmoke;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  position: absolute;
+  left: 25%;
+  text-align: center;
+  top: 5%;
+  width: 50%;
+}
+
+.container {
+  height: 350px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.title {
+  background: transparent;
+  border-bottom: 1px solid #ffd447;
+  color: #ffd447;
+  display: block;
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0 0 5px 0;
+  text-decoration: none;
+}
+
+h3 {
+  color: #ffd447;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  text-align: center;
+}
+
+ul.ingredients {
+  margin: 0;
+  padding: 0;
+  /* list-style: disc; */
+}
+
+li {
+  color: #ffd447;
+  font-size: 1rem;
+  text-align: left;
+}
+
+p {
+  font-size: medium;
+  font-weight: normal;
+  padding: 15px;
+}
+
+.ing {
+  color: #ffd447;
+  margin: 20px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.search_wrap {
+  width: 500px;
+  margin: 38px auto;
+}
+
+.search_wrap .search_box {
+  transition: 0.3s;
+  position: relative;
+  width: 500px;
+  height: 60px;
+}
+
+.search_wrap .search_box .input {
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 18px;
+}
+
+.search_wrap .search_box .input {
+  transition: 0.3s;
+  padding: 80px;
+  padding-right: 0px;
+  border-radius: 50%;
+}
+
+.search_wrap .search_box .btn {
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background: #2e2c2c;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.search_wrap .search_box .btn:hover {
+  color: whitesmoke;
+}
+
+.search_wrap .search_box .btn.btn_common .fas {
+  transition: 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #2e2c2c;
+  font-size: 20px;
+}
+
+#create-recipe-btn {
+  transition: 0.3s;
+  color: #2e2c2c;
+  text-decoration: none;
+}
+
+#create-recipe-btn:hover {
+  background-color: #faa28e;
+}
+
+.btn,
+button {
+  transition: 0.3s;
+  color: #2e2c2c;
+  text-decoration: none;
+}
+
+#logout,
+#header-nav a,
+#pantry-hacker-p {
+  background: transparent;
+  transition: 0.3s;
+  color: #faa28e;
+  font-style: italic;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#header-nav a:hover {
+  font-style: normal;
+  color: #ffd447;
+}
+
+#logout:hover {
+  color: #d41414;
+}
+
+#seperator {
+  color: aliceblue;
 }

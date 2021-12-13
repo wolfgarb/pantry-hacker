@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+// const validator = require('validator-js');
 
 class Recipe extends Model {}
 
@@ -15,18 +16,26 @@ Recipe.init(
       type: DataTypes.STRING(50),
       allowNull: false
     },
-    // url?
-    ing_1: {
+    ing1: {
       type: DataTypes.STRING(50),
       allowNull: false
     },
-    ing_2: {
+    ing2: {
       type: DataTypes.STRING(50),
-      allowNull: false
+      allowNull: true,
+      defaultValue: null
     },
-    ing_3: {
+    ing3: {
       type: DataTypes.STRING(50),
-      allowNull: false
+      allowNull: true,
+      defaultValue: null
+    },
+    recipe_text: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     }
   },
   {

@@ -1,3 +1,39 @@
+<section class="hero">
+  <div class="hero-cta">
+  <h1 class="header1">Find recipes fast</h1>
+  <p>
+    Ever come home from a long day of work and stare blankly in your fridge thinking what to make? <br>
+    Tired of scrolling through home-maker blogs, ads, and life stories? You've come to the right place.<br> 
+    <span id='pantry-hacker-p'>Pantry Hacker</span> is a simple search tool for quick recipe information.
+    <br>Create an account to access the dashboard, post recipes, save favorites, and add comments.
+</p>
+  </div>
+</section>
+
+<div id='search-section'>
+    Enter 3 key ingredients to search our recipe database
 <div>
-    welcome to the club
+<form id='recipe-search-form' class="recipe-search-form">
+    {{!-- <label for="ing-list">What's in your pantry?</label> --}}
+    <input id="ing1" name="ing1" placeholder="ingredient"/>
+    <br>
+    <input id='ing2' name='ing2' placeholder="ingredient" />
+    <br>
+    <input id='ing3' name='ing3' placeholder="ingredient" />
+    <br>
+    <button class="btn btn_common" type="submit">search</button>
+</form>
 </div>
+</div>
+
+{{!-- recipe stuff shows up here --}}
+
+<ol class="recipe-list">
+  {{#each recipes as |recipe|}}
+  <li>
+    {{> recipe-info recipe }}
+  </li>
+  {{/each}}
+</ol>
+
+<script src="/javascript/recipe-search.js"></script>

@@ -1,26 +1,41 @@
+<!DOCTYPE html>
 <html lang='en'>
 
 <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>pantry hacker</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css'>
 </head>
 
 <body>
+    <div>
     <header>
-        welcome to the pantry hacker!
+        <h1 id="header-nav" >
+        <a href="/"> pantry hacker </a>
+        </h1>
         <nav>
-            // nav bar
+            <span><a href="/">home</a></span>
+            <span id='seperator'>|</span>
+            {{#if loggedIn}}
+            <a href="/dashboard">dashboard</a>
+            <button id="logout" class="btn-no-style">logout</button>
+            {{else}}
+            <a href="/login">login</a>
+            {{/if}}
         </nav>
     </header>
 
-<main>
-    {{{body}}}
-</main>
-   
+    <main>
+        {{{ body }}}
+    </main>
+    </div>
 
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
 
 </body>
+
 
 </html>
