@@ -15,19 +15,18 @@ Recipe.init(
       type: DataTypes.STRING(50),
       allowNull: false
     },
-    // array?
-    ingredients: {
+    ing1: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    // ing_2: {
-    //   type: DataTypes.STRING(50),
-    //   allowNull: true
-    // },
-    // ing_3: {
-    //   type: DataTypes.STRING(50),
-    //   allowNull: true
-    // },
+    ing2: {
+      type: DataTypes.STRING(50),
+      allowNull: true
+    },
+    ing3: {
+      type: DataTypes.STRING(50),
+      allowNull: true
+    },
     recipe_text: {
       type: DataTypes.TEXT,
       allowNull: false,

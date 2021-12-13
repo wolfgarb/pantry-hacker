@@ -3,6 +3,7 @@ const { Recipe, User, Comment } = require('../../models');
 const sequelize = require('../../config/connection');
 const { Op } = require('sequelize');
 const withAuth = require('../../utils/auth');
+const FuzzySearch = require('fuzzy-search');
 
 // GET all recipes
 // localhost:3001/api/recipes
@@ -52,29 +53,29 @@ router.get('/', (req, res) => {
     });
 });
 
-// router.get('/:ingredient', (req, res) => {
-//   Recipe.findAll({
-//     where: {
-//       ingredients: {
-//         // change req.params to array
-//         [Op.substring]: `%${req.params.ingredient}%`
-//       }
-//     }
-//   })
-//     .then((dbRecipeData) => {
-//       if (!dbRecipeData) {
-//         res.status(404).json({ message: 'cannot find recipe with this ID ' });
-//         return;
-//       }
-//       const recipes = dbRecipeData.map((recipe) => recipe.get({ plain: true }));
-//       console.log(recipes);
-//       res.render('search-results', { recipes });
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
+router.get('/:ingredient', (req, res) => {
+  Recipe.findAll({
+    where: {
+      ing1: {
+        // change req.params to array
+        [Op.substring]: `%${req.params.ingredient}%`
+      }
+    }
+  })
+    .then((dbRecipeData) => {
+      if (!dbRecipeData) {
+        res.status(404).json({ message: 'cannot find recipe with this ID ' });
+        return;
+      }
+      const recipes = dbRecipeData.map((recipe) => recipe.get({ plain: true }));
+      console.log(recipes);
+      res.render('search-results', { recipes });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 // GET single recipe
 // localhost:3001/api/recipes/:id
