@@ -16,19 +16,9 @@ Recipe.init(
       type: DataTypes.STRING(50),
       allowNull: false
     },
-    ing1: {
-      type: DataTypes.STRING(50),
+    ingredients: {
+      type: DataTypes.STRING,
       allowNull: false
-    },
-    ing2: {
-      type: DataTypes.STRING(50),
-      allowNull: true,
-      defaultValue: null
-    },
-    ing3: {
-      type: DataTypes.STRING(50),
-      allowNull: true,
-      defaultValue: null
     },
     recipe_text: {
       type: DataTypes.TEXT,

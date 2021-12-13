@@ -1,23 +1,19 @@
 async function recipeSearch(event) {
   event.preventDefault();
 
-  const ing1 = document.querySelector('#ing1').value;
-  const ing2 = document.querySelector('#ing2').value;
-  const ing3 = document.querySelector('#ing3').value;
-  const response = await fetch(`/api/recipes/${ing1 || ing2 || ing3}`);
+  const ingredients = document.querySelector('#ingredients').value;
+  const response = await fetch(`/api/recipes/${ingredients}`);
   console.log(response);
 
   if (response.ok) {
-    document.location.replace(`/api/recipes/${ing1 || ing2 || ing3}`);
+    document.location.replace(`/api/recipes/${ingredients}`);
     console.log(response);
   } else {
     alert(response.statusText);
   }
 }
 
-document
-  .querySelector('#recipe-search-form')
-  .addEventListener('submit', recipeSearch);
+document.addEventListener('submit', recipeSearch);
 
 // // fetch call taking in params
 // const response = await fetch(`/api/recipes/${ingList}`);
