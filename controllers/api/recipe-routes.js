@@ -53,12 +53,11 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/:ingredient', (req, res) => {
+router.get('/:ingredients', (req, res) => {
   Recipe.findAll({
     where: {
-      ing1: {
-        // change req.params to array
-        [Op.substring]: `%${req.params.ingredient}%`
+      ingredients: {
+        [Op.like]: `%${req.params.ingredients}%`
       }
     }
   })
@@ -122,9 +121,7 @@ router.get('/:id', (req, res) => {
 router.post('/', withAuth, (req, res) => {
   Recipe.create({
     title: req.body.title,
-    ing1: req.body.ing1,
-    ing2: req.body.ing2,
-    ing3: req.body.ing3,
+    ingredients: req.body.ingredients,
     recipe_text: req.body.recipe_text,
     user_id: req.session.user_id
   })
@@ -140,9 +137,7 @@ router.put('/:id', withAuth, (req, res) => {
   Recipe.update(
     {
       title: req.body.title,
-      ing1: req.body.ing1,
-      ing2: req.body.ing2,
-      ing3: req.body.ing3,
+      ingredients: req.body.ingredients,
       recipe_text: req.body.recipe_text
     },
     {
