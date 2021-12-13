@@ -9,7 +9,6 @@ const withAuth = require('../../utils/auth');
 router.get('/', (req, res) => {
   console.log(req.body);
   Recipe.findAll({
-    // attributes: ['id', 'title', 'ingredients', 'recipe_text'],
     include: [
       {
         model: Comment,
@@ -38,30 +37,44 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/:ingredient', (req, res) => {
-  Recipe.findAll({
-    where: {
-      ingredients: {
-        // change req.params to array
-        [Op.substring]: `%${req.params.ingredient}%`
-      }
-    }
-    // attributes: ['id', 'title', 'ingredients', 'recipe_text']
-  })
+router.get('/', (req, res) => {
+  console.log(req.body);
+  Recipe.findAll({})
     .then((dbRecipeData) => {
-      if (!dbRecipeData) {
-        res.status(404).json({ message: 'cannot find recipe with this ID ' });
-        return;
-      }
       const recipes = dbRecipeData.map((recipe) => recipe.get({ plain: true }));
       console.log(recipes);
-      res.render('search-results', { recipes });
+      for (let i = 0; i < recipes.length; i++) {
+        console.log(recipes[i].ingredients);
+      }
     })
     .catch((err) => {
       console.log(err);
-      res.status(500).json(err);
     });
 });
+
+// router.get('/:ingredient', (req, res) => {
+//   Recipe.findAll({
+//     where: {
+//       ingredients: {
+//         // change req.params to array
+//         [Op.substring]: `%${req.params.ingredient}%`
+//       }
+//     }
+//   })
+//     .then((dbRecipeData) => {
+//       if (!dbRecipeData) {
+//         res.status(404).json({ message: 'cannot find recipe with this ID ' });
+//         return;
+//       }
+//       const recipes = dbRecipeData.map((recipe) => recipe.get({ plain: true }));
+//       console.log(recipes);
+//       res.render('search-results', { recipes });
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
 // GET single recipe
 // localhost:3001/api/recipes/:id
@@ -70,7 +83,6 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    // attributes: ['id', 'title', 'ingredients', 'recipe_text'],
     include: [
       {
         model: Comment,
@@ -107,7 +119,6 @@ router.get('/:id', (req, res) => {
 
 //post a recipe
 router.post('/', withAuth, (req, res) => {
-  // expects {title: 'Title', ing_1 = 'Chicken', ing_2='Bread', ing_3='Cheese', recipe_text: 'text', user_id: 1}
   Recipe.create({
     title: req.body.title,
     ingredients: req.body.ingredients,

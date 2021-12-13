@@ -2,14 +2,18 @@ async function newRecipeHandler(event) {
   event.preventDefault();
 
   const title = document.querySelector('#recipe-title').value;
-  const ingredients = document.querySelector('#ing-list').value;
+  const ing1 = document.querySelector('#ing1').value;
+  const ing2 = document.querySelector('#ing2').value;
+  const ing3 = document.querySelector('#ing3').value;
   const recipe_text = document.querySelector('#recipe-text').value;
 
   const response = await fetch(`/api/recipes`, {
     method: 'POST',
     body: JSON.stringify({
       title,
-      ingredients,
+      ing1,
+      ing2,
+      ing3,
       recipe_text
     }),
     headers: {

@@ -11,7 +11,6 @@ const { User, Recipe, Comment } = require('../models');
 router.get('/', (req, res) => {
   console.log('======================');
   Recipe.findAll({
-    // attributes: ['id', 'ingredients', 'recipe_text', 'title', 'created_at'],
     order: [['created_at', 'DESC']],
     include: [
       {
@@ -54,7 +53,6 @@ router.get('/recipe/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    // attributes: ['id', 'ingredients', 'recipe_text', 'title', 'created_at'],
     include: [
       {
         model: Comment,

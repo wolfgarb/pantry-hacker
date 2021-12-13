@@ -22,11 +22,11 @@ Recipe.init(
     },
     // ing_2: {
     //   type: DataTypes.STRING(50),
-    //   allowNull: false
+    //   allowNull: true
     // },
     // ing_3: {
     //   type: DataTypes.STRING(50),
-    //   allowNull: false
+    //   allowNull: true
     // },
     recipe_text: {
       type: DataTypes.TEXT,
