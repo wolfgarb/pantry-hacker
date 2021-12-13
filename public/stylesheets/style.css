@@ -183,10 +183,11 @@ main {
 .comment {
   padding: 1%;
   margin-bottom: 1%;
+ 
 }
 
 .comment:nth-child(odd) {
-  background-color: #fff5eb;
+  color:rgb(255, 196, 0);
 }
 
 .comment .meta {
