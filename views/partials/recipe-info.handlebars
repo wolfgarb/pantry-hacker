@@ -1,17 +1,13 @@
-<div class="container">
     <div class="recipe-card">
-        <div class="body">
+        {{!-- previously div class='body' --}}
             <h2>
             <a href="/recipe/{{id}}">{{title}} </a>
             </h2>
-            <h3>Ingredients:</h3>
+            <h3 class='card-subtitle'>key ingredients</h3>
             <ul class="ul-ingredients">
                 <li > {{ingredients}} </li>
-               
             </ul>
-            <h3>How to:</h3>
-                <p class="ing">{{recipe_text}}</p>
-            {{!-- {{ recipe_content }} --}}
-        </div>
+            <h3 class='card-subtitle'>instructions</h3>
+                <p class="instructions">{{recipe_text}}</p>
+            {{!-- {{ recipe_content }} --}}  
     </div>
-</div>
