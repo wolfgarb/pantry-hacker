@@ -6,10 +6,11 @@
     <form class="edit-recipe-form">
         <div>
             <input id='recipe-title' name="recipe-title" type="text" value="{{recipe.title}}" />
+            <p>{{recipe.ingredients}}</p>
             <p>{{recipe.recipe_text}}</p>
         </div>
         <div>
-            Posted by you on {{format_date recipe.created_at}}
+            Posted by you on {{format_date created_at}}
             <a href="/recipe/{{recipe.id}}">{{recipe.comments.length}} {{format_plural "comment" recipe.comments.length}}</a>
         </div>
         <button id='save-recipe' type="submit">Save recipe</button>

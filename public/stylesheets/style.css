@@ -189,6 +189,7 @@ main {
 
 .comment-form {
   margin-bottom: 5%;
+  border-bottom: 1px solid #ccc;
 }
 
 .comment {
@@ -208,6 +209,11 @@ main {
 
 .new-post-form input {
   width: 300px;
+}
+
+#create-new-recipe-form {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
 }
 
 .edit-post-form {
