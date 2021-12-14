@@ -5,15 +5,15 @@
     </h2>
     <form class="edit-recipe-form">
         <div>
-            <input name="recipe-title" type="text" value="{{recipe.title}}" />
-            <span>({{recipe.recipe_text}})</span>
+            <input id='recipe-title' name="recipe-title" type="text" value="{{recipe.title}}" />
+            <p>{{recipe.recipe_text}}</p>
         </div>
         <div>
             Posted by you on {{format_date recipe.created_at}}
             <a href="/recipe/{{recipe.id}}">{{recipe.comments.length}} {{format_plural "comment" recipe.comments.length}}</a>
         </div>
-        <button type="submit">Save recipe</button>
-        <button type="button" class="delete-recipe-btn">Delete recipe</button>
+        <button id='save-recipe' type="submit">Save recipe</button>
+        <button id='delete-recipe' type="button" class="delete-recipe-btn">Delete recipe</button>
     </form>
 </article>
 
@@ -23,7 +23,7 @@
     </div>
 
     <div>
-        <button type="submit">add comment</button>
+        <button id='add-comment' type="submit">add comment</button>
     </div>
 </form>
 

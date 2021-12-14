@@ -1,11 +1,12 @@
 async function editFormHandler(event) {
   event.preventDefault();
 
-  const title = document.querySelector('input[name="recipe-title"]').value;
+  const title = document.querySelector('#recipe-title').value.trim();
   const ingredients = document.querySelector('#ingredients').value;
   const recipe_text = document.querySelector(
     'textarea[name="recipe-text"]'
   ).value;
+  console.log(title);
   const id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];

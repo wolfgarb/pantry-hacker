@@ -3,7 +3,7 @@ const { Recipe, User, Comment } = require('../../models');
 const sequelize = require('../../config/connection');
 const { Op } = require('sequelize');
 const withAuth = require('../../utils/auth');
-const FuzzySearch = require('fuzzy-search');
+// const FuzzySearch = require('fuzzy-search');
 
 // GET all recipes
 // localhost:3001/api/recipes
