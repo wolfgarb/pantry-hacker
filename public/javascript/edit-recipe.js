@@ -2,10 +2,10 @@ async function editFormHandler(event) {
   event.preventDefault();
 
   const title = document.querySelector('#recipe-title').value.trim();
-  const ingredients = document.querySelector('#ingredients').value;
-  const recipe_text = document.querySelector(
-    'textarea[name="recipe-text"]'
-  ).value;
+  // const ingredients = document.querySelector('#ingredients').value;
+  // const recipe_text = document.querySelector(
+  //   'textarea[name="recipe-text"]'
+  // ).value;
   console.log(title);
   const id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
@@ -14,9 +14,9 @@ async function editFormHandler(event) {
   const response = await fetch(`/api/recipes/${id}`, {
     method: 'PUT',
     body: JSON.stringify({
-      title,
-      ingredients,
-      recipe_text
+      title
+      // ingredients,
+      // recipe_text
     }),
     headers: {
       'Content-Type': 'application/json'
